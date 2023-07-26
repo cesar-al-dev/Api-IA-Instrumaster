@@ -32,3 +32,5 @@ def HacerPrediccion(file_path):
     instrumento = instrumentos[predicted_label[0]]
     print("Predijo que es:", instrumento)
     return instrumento
+archivo_guardado = os.path.join('ia_instrumaster/ia_instrumaster_app/assets/G_acousticguitar_Mari_1.wav')
+HacerPrediccion(archivo_guardado)
