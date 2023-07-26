@@ -26,7 +26,7 @@ def HacerPrediccion(file_path):
     instrumentos = ['Am', 'C', 'Dm', 'Em', 'F', 'G']
     samplep = preprocess(file_path)
     samplep = np.expand_dims(samplep, axis=0)
-    modeloCNN2=tf.keras.models.load_model('ia_instrumaster_app/model/modelochords.h5')
+    modeloCNN2=tf.keras.models.load_model('D:\PC\Documents\github\Api-IA-Instrumaster\ia_instrumaster\ia_instrumaster_app\model\modelochords.h5')
     prediction = modeloCNN2.predict(samplep)
     predicted_label = np.argmax(prediction, axis=1)
     instrumento = instrumentos[predicted_label[0]]
